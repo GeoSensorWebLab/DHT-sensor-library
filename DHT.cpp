@@ -1,7 +1,7 @@
 /* DHT library
 
 MIT license
-written by Adafruit Industries
+written by James Badger
 */
 
 #include "DHT.h"
