@@ -8,6 +8,11 @@ written by James Badger
 
 #define MIN_INTERVAL 2000
 
+// Define the clock cycles from the CPU frequency defined for the board
+#define clockCyclesPerMicrosecond() ( F_CPU / 1000000L )
+#define clockCyclesToMicroseconds(a) ( (a) / clockCyclesPerMicrosecond() )
+#define microsecondsToClockCycles(a) ( (a) * clockCyclesPerMicrosecond() )
+
 namespace GSW {
   DHT::DHT(uint8_t pin, uint8_t type, uint8_t count) {
     _pin = pin;
